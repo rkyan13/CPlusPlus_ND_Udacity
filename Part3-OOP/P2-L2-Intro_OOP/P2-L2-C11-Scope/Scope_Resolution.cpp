@@ -17,19 +17,10 @@ class Date {
 };
 
 // TODO: Define Date::Day(int day)
-void Date::Day(int day) {
-    assert(day >0 && day <32);
-    Date::day = day;
-}
 
 // TODO: Define Date::Month(int month)
-void Date::Month(int month){
-    assert(month >0 && month <13);
-    Date::month = month;
-}     
 
 // TODO: Define Date::Year(int year)
-void Date::Year(int y): year(y) {}
 
 // Test in main
 int main() {
