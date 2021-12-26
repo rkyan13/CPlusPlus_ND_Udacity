@@ -1,0 +1,52 @@
+1) 
+Difference between pointers and references
+https://www.geeksforgeeks.org/passing-by-pointer-vs-passing-by-reference-in-c/
+some examples: pointers can be reassigned to point to another object
+references cannot be reassigned to another object. whatever it is at initialization, that is it
+references cannot be NULL eithre
+
+2)
+Difference between 
+i)   default-constructor      & user-defined-constructor: this link look it up later
+For the below items
+https://www.geeksforgeeks.org/copy-constructor-in-cpp/
+ii)  default-copy-constructor & user-defined-copy-constructor
+iii) shallow copy and deep copy(when what occurs depending on which construtor you use)
+iv)  when using the = operator in the context of copy constructors: difference between when it is used at initialization versus when it is used in the middle of the code
+v)   what happens when copy constructor is private(object become suncopiable. then why would you have a copy constructor ???)
+
+3) splitting into header files and cpp files
+i)   splitting in .h and .cpp : simple example for dummies: http://cse230.artifice.cc/lecture/splitting-code.html
+ii)  ground rules            : https://www.cplusplus.com/articles/Gw6AC542/
+see the below section in the above link
+*******************************************************************************************************************************************************************************************************************
+*****************************************************
+** 4) The "right way" to include **
+*****************************************************
+Classes you create will often have dependencies on other classes. A derived class, for example, will always be dependent on its parent, because in order to be derived from the parent, it must be aware of its parent at compile time.
+
+There are two basic kinds of dependencies you need to be aware of:
+1) stuff that can be forward declared
+2) stuff that needs to be #included
+
+If, for example, class A uses class B, then class B is one of class A's dependencies. Whether it can be forward declared or needs to be included depends on how B is used within A:
+
+- do nothing if: A makes no references at all to B
+- do nothing if: The only reference to B is in a friend declaration
+- forward declare B if: A contains a B pointer or reference: B* myb;
+- forward declare B if: one or more functions has a B object/pointer/reference
+as a parementer, or as a return type: B MyFunction(B myb);
+- #include "b.h" if: B is a parent class of A
+- #include "b.h" if: A contains a B object: B myb;
+
+You want to do the least drastic option possible. Do nothing if you can, but if you can't, forward declare if you can. But if it's necessary, then #include the other header.
+
+Ideally, the dependencies for the class should be layed out in the header. Here is a typical outline of how a "right way" header might look:
+
+********************************************************************************************************************************************************************************************************************
+
+
+
+4) How to compile/ link with multiple files
+i
+
