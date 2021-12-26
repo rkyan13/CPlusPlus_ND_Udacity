@@ -10,24 +10,25 @@ using namespace std;
 
 class Maze{
   private:
-    enum class Cell{kEmpty, kObstacle, kLanded};
+    enum class Cell{ kLanded =-1, kEmpty =0, kObstacle =1 };
     tuple<int,int> start;
     tuple<int,int> goal;
-    tuple<int,int> current;
     vector<vector<Cell>>   board;
-    vector<vector<Cell>>   landed;
+    vector<vector<Cell>>   lcost_evaluated;
+    vector<vector<Cell>>   actually_landed;
     vector<vector<int>>    heuristic;
     vector<vector<int>>    landing_cost;
     vector<vector<tuple<int,int>>> parent;
     deque<tuple<int,int>>          toexpand_list;
+    deque<int>                     toexpand_cost;
     vector<tuple<int,int>>         final_list;
     int num_landings;
 
     bool search_complete ;
     bool goal_reached    ;
+    tuple<int,int> current;
     int  num_valid_neighbors;
-    deque<tuple<int,int>>    temp_toexpand_list;
-    vector<int>              temp_cost;
+
 
 
 
@@ -39,8 +40,8 @@ class Maze{
 
   public:
     Maze(string file_name, int start_x, int start_y, int goal_x, int goal_y);
-    void printBoardAsInt();
-    void printBoardAsEmoji();
+    void printAsInt(string str);
+    void printAsEmoji(string str);
     void seek_goal();
 };
 
