@@ -1,4 +1,5 @@
 .ipynb_checkpoints
-.bin
-.o
-.out
+*.bin
+*.o
+*.out
+*.gch
