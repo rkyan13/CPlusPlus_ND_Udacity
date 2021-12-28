@@ -26,8 +26,3 @@ int main(){
   my_sphere3.print_details();
 
 }
-
-
-
-
-,,,,,
