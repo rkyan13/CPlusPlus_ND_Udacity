@@ -1,0 +1,10 @@
+#include "math_functions_ksw.h"
+
+//Function Definitions
+int add(int x, int y){
+  return x+y;
+}
+
+int multiply(int x, int y){
+  return x*y;
+}
