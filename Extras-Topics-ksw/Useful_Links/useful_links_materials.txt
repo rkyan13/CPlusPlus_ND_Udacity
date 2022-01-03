@@ -1,4 +1,4 @@
-1) 
+1)
 Difference between pointers and references
 https://www.geeksforgeeks.org/passing-by-pointer-vs-passing-by-reference-in-c/
 some examples: pointers can be reassigned to point to another object
@@ -6,7 +6,7 @@ references cannot be reassigned to another object. whatever it is at initializat
 references cannot be NULL eithre
 
 2)
-Difference between 
+Difference between
 i)   default-constructor      & user-defined-constructor: this link look it up later
 For the below items
 https://www.geeksforgeeks.org/copy-constructor-in-cpp/
@@ -44,9 +44,22 @@ You want to do the least drastic option possible. Do nothing if you can, but if 
 Ideally, the dependencies for the class should be layed out in the header. Here is a typical outline of how a "right way" header might look:
 
 ********************************************************************************************************************************************************************************************************************
+5) How to compile/ link with multiple files
 
 
 
-4) How to compile/ link with multiple files
-i
+****************************************************************************************************************************************************************************************
 
+6) pointers to functions in c++
+https://www.cprogramming.com/tutorial/function-pointers.html
+
+Callback functions in c++
+https://stackoverflow.com/questions/2298242/callback-functions-in-c
+
+****************************************************************************************************************************************************************************************
+
+7) Parent & Derived classes: The right way to initialize variables in the parent class and call parent Constructors
+https://www.learncpp.com/cpp-tutorial/constructors-and-initialization-of-derived-classes/#:~:text=However%2C%20C%2B%2B%20prevents%20classes%20from,same%20class%20as%20the%20variable.
+
+
+****************************************************************************************************************************************************************************************
